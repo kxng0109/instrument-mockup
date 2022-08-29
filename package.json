@@ -1,0 +1,22 @@
+{
+  "name": "instrument",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm:live-server\" \"npm:compile-typescript\"",
+    "compile-typescript": "tsc -w",
+    "live-server": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*, !.git/**/*' --directory --port 7777 --browser \"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kxng0109/instrument-mockup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kxng0109/instrument-mockup/issues"
+  },
+  "homepage": "https://github.com/kxng0109/instrument-mockup#readme"
+}
