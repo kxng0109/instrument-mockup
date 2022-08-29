@@ -15,5 +15,5 @@ ion-icon{
 }
 
 #video-container{
-	@apply relative text-black;
+	@apply relative;
 }

@@ -652,6 +652,4 @@ ion-icon {
 
 #video-container {
   position: relative;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
