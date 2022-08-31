@@ -95,7 +95,7 @@ ion-icon{
 }
 
 header{
-	@apply padding py-7 flex flex-row justify-between items-center
+	@apply padding py-7 flex flex-row justify-between items-center relative z-5
 }
 
 #logo-text{
@@ -103,7 +103,11 @@ header{
 }
 
 #menu-btn{
-	@apply text-2xl
+	@apply text-2xl cursor-pointer
+}
+
+#navbar{
+	@apply fixed inset-0 z-4 bg-black pb-[15vh] flex flex-col justify-end padding
 }
 
 
@@ -215,4 +219,12 @@ footer{
 
 .footer--icons:nth-child(2){
 	@apply mx-5
+}
+
+#newsletter-link{
+	@apply before:hidden after:hidden pt-4 inline-flex items-center;
+}
+
+#newsletter-link--arrow{
+	@apply text-xs ml-[0.9rem]
 }

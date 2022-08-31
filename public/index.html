@@ -29,7 +29,8 @@
 			<!-- <img src="./images/menu.svg" alt="menu icon" class="fill-white"> -->
 			<!-- <ion-icon name="close"></ion-icon> -->
 		</header>
-		<nav class="hidden">
+
+		<nav id="navbar">
 			<a href="#" class="nav-links">what we do</a>
 			<a href="#" class="nav-links">work</a>
 			<a href="#" class="nav-links">who we are</a>
@@ -49,11 +50,13 @@
 		<main>
 			<section id="first-section">
 				<div id="video-container" style="aspect-ratio: 16 / 9">
-					<ion-icon name="play-circle" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl text-black cursor-pointer"></ion-icon>
-					<video autoplay muted>
+					<svg xmlns="http://www.w3.org/2000/svg" class="ionicon absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 cursor-pointer z-3 rounded-full" viewBox="0 0 512 512"><title>Play</title><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm74.77 217.3l-114.45 69.14a10.78 10.78 0 01-16.32-9.31V186.87a10.78 10.78 0 0116.32-9.31l114.45 69.14a10.89 10.89 0 010 18.6z"/></svg>
+					<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white z-2"></div>
+
+					<video autoplay muted loop poster="./images/video_poster.avif" class="absolute z-1">
 						<source src="./videos/preloaded_video_360p.mp4" type="video/mp4">
 					</video>
-					<!-- <iframe src="https://player.vimeo.com/video/428281636?h=be0963aaa9&app_id=122963" allow="autoplay; fullscreen; picture-in-picture" title="Instrument 2021 Reel (Updated Aug 21)"></iframe> -->
+					<iframe src="https://player.vimeo.com/video/428281636?h=be0963aaa9&app_id=122963" allow="autoplay; fullscreen; picture-in-picture" title="Instrument 2021 Reel (Updated Aug 21)" class="w-full h-full"></iframe>
 				</div>
 			</section>
 
@@ -139,7 +142,7 @@
 				</div>
 
 				<div class="footer--outer-divs">
-					<a href="#" class="footer--links">Newsletter <ion-icon name="arrow-forward-outline"></ion-icon></a><!-- card--button -->
+					<a href="#" class="footer--links" id="newsletter-link">Newsletter <ion-icon name="arrow-forward-outline" id="newsletter-link--arrow"></ion-icon></a><!-- card--button -->
 					<div id="footer-icons-div">
 						<ion-icon name="logo-instagram" class="footer--icons"></ion-icon>
 						<ion-icon name="logo-twitter" class="footer--icons"></ion-icon>
