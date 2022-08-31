@@ -8,7 +8,7 @@
 	}
 
 	.padding{
-		@apply px-[26px]
+		@apply /*px-[26px]*/ px-[8.125vw]
 	}
 }
 
@@ -91,7 +91,8 @@ ion-icon{
 }
 
 #cookies{
-	@apply hidden
+	@apply fixed z-3 bottom-6 inset-x-5 flex py-5 hidden;
+	background: hsla(0,0%,100%,.85);
 }
 
 header{
@@ -107,13 +108,22 @@ header{
 }
 
 #navbar{
-	@apply fixed inset-0 z-4 bg-black pb-[15vh] flex flex-col justify-end padding
+	@apply fixed inset-0 z-4 bg-black pb-[15vh] flex flex-col justify-end padding hidden
+}
+
+.links{
+	@apply text-sm leading-6 uppercase py-[0.78rem] w-fit block relative before:content-['['] before:absolute before:-left-[1.1rem] before:text-gray-500 after:absolute after:-right-[1.1rem] after:content-[']'] after:text-gray-500 transition-all;
+	font-family: 'Monument Grotesk Mono', monospace;
+}
+
+.nav-links{
+	@apply py-[0.65rem] last-of-type:pb-0 tracking-wider;
 }
 
 
 
 #video-container{
-	@apply relative mt-14;
+	@apply relative mt-14 sm:mt-52;
 }
 
 #second-section{
@@ -121,7 +131,7 @@ header{
 }
 
 #second-section--text, #fourth-section--text, #seventh-section--text{
-	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em];
+	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem];
 	font-family: 'Whyte Book', sans-serif;
 }
 
@@ -202,11 +212,6 @@ footer{
 
 .footer--inner-divs{
 	@apply flex flex-col
-}
-
-.footer--links{
-	@apply text-sm leading-6 uppercase py-[0.78rem] w-fit block relative before:content-['['] before:absolute before:-left-[1.1rem] before:text-gray-500 after:absolute after:-right-[1.1rem] after:content-[']'] after:text-gray-500 transition-all;
-	font-family: 'Monument Grotesk Mono', monospace;
 }
 
 #footer-icons-div{

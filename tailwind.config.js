@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
+    screens:{
+      'sm' : '500px',
+      'md' :  '768px',
+      'lg' : '1024px',
+      'xl' : '1440px',
+      '2xl' : '1920px',
+      '3xl' : '2500px',
+    },
     extend: {
       colors:{
         'custom-blue' : '#6c83ff',
