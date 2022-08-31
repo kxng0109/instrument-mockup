@@ -618,18 +618,120 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .fill-white {
   fill: #fff;
 }
 
-.text-5xl {
-  font-size: 3rem;
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+/*Not using 357f, 6884, bc3c*/
+
+@font-face {
+  font-family: Whyte Book;
+
+  src: url(./fonts/4523966.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Whyte Thin;
+
+  src: url(./fonts/82c30f5.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Whyte Medium;
+
+  src: url(./fonts/f68ea8a.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Whyte Inktrap Book;
+
+  src: url(./fonts/2a33d70.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Whyte Inktrap Medium;
+
+  src: url(./fonts/36262b2.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Whyte Inktrap Bold;
+
+  src: url(./fonts/72acf0e.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Monument Grotesk Mono;
+
+  src: url(./fonts/e21b9b1.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
+}
+
+@font-face {
+  font-family: Monument Grotesk Semi Mono;
+
+  src: url(./fonts/00b834c.woff2) format("woff2");
+
+  font-style: normal;
+
+  font-stretch: normal;
+
+  font-display: swap
 }
 
 *,  *:before,  *:after {
@@ -650,6 +752,216 @@ ion-icon {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+#cookies {
+  display: none;
+}
+
+header {
+  padding-left: 26px;
+  padding-right: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+#logo-text {
+  width: 110px;
+}
+
+#menu-btn {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 #video-container {
   position: relative;
+  margin-top: 3.5rem;
+}
+
+#second-section {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+#second-section--text,  #fourth-section--text,  #seventh-section--text {
+  margin-top: 4.6rem;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: -0.035em;
+  font-family: 'Whyte Book', sans-serif;
+}
+
+.card {
+  padding-left: 26px;
+  padding-right: 26px;
+  margin-top: 60px;
+  margin-bottom: 6rem;
+}
+
+.card--image {
+  aspect-ratio: 269/202;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card--text {
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: 'Whyte Book', sans-serif;
+}
+
+.card--button {
+  margin-top: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.05em;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  font-family: 'Monument Grotesk Semi Mono', monospace;
+}
+
+.card--button>ion-icon {
+  margin-left: 0.85rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+#fourth-section {
+  padding-left: 26px;
+  padding-right: 26px;
+  margin-top: 7.5rem;
+  margin-bottom: 8.35rem;
+}
+
+#fourth-section--button {
+  margin-top: 1.65rem;
+  margin-bottom: 1.65rem;
+}
+
+.card2 {
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+
+.card2--inner-div {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.card2--heading-text {
+  margin-top: 1.1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-size: 19px;
+  font-family: "Whyte Medium", sans-serif;
+}
+
+.card2--text {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.05em;
+  font-family: 'Monument Grotesk Semi Mono', monospace;
+}
+
+#sixth-section {
+  display: flex;
+  align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.sixth-section--logos {
+  width: 33.333333%;
+}
+
+#seventh-section {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+#seventh-section--text {
+  margin-top: 0px;
+  margin-bottom: 1.25rem;
+}
+
+footer {
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 10rem;
+  letter-spacing: 0.05em;
+}
+
+.footer--inner-divs {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer--links {
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 0.78rem;
+  padding-bottom: 0.78rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.footer--links::before {
+  position: absolute;
+  left: -1.1rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  --tw-content: '[';
+  content: var(--tw-content);
+}
+
+.footer--links::after {
+  position: absolute;
+  right: -1.1rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  --tw-content: ']';
+  content: var(--tw-content);
+}
+
+.footer--links{
+  font-family: 'Monument Grotesk Mono', monospace;
+}
+
+#footer-icons-div {
+  padding-bottom: 3.35rem;
+  padding-top: 3rem;
+}
+
+.footer--icons {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.footer--icons:nth-child(2) {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
