@@ -8,7 +8,7 @@
 	}
 
 	.padding{
-		@apply /*px-[26px]*/ px-[8.125vw]
+		@apply /*px-[26px]*/ px-[8.125vw] md:px-[4.0625vw]/*[1.95rem]*/
 	}
 
 	.calculation{
@@ -111,7 +111,7 @@ ion-icon{
 }
 
 header{
-	@apply padding py-7 flex flex-row justify-between items-center relative z-5
+	@apply padding py-7 flex flex-row justify-between items-center relative z-5 md:py-9 tracking-wider
 }
 
 #logo-text{
@@ -119,7 +119,15 @@ header{
 }
 
 #menu-btn{
-	@apply text-2xl cursor-pointer
+	@apply text-2xl cursor-pointer md:hidden;
+}
+
+.header-nav{
+	@apply hidden md:flex;
+}
+
+.header-nav--links{
+	@apply ml-[3.15rem]
 }
 
 #navbar{
@@ -138,7 +146,7 @@ header{
 
 
 #video-container{
-	@apply relative mt-14 sm:mt-52;
+	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem]
 }
 
 #second-section{
@@ -146,17 +154,17 @@ header{
 }
 
 #second-section--text, #fourth-section--text, #seventh-section--text{
-	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center;
+	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center md:mx-16 md:mt-[12.85rem] md:mb-[11.6rem];
 	font-family: 'Whyte Book', sans-serif;
 }
 
 
 .card{
-	@apply mt-[60px] mb-24 padding sm:mb-[214px];
+	@apply mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px];
 }
 
 .card--image{
-	@apply aspect-[269/202] object-cover
+	@apply aspect-[269/202] object-cover w-full
 }
 
 .card--inner-div{
@@ -184,7 +192,7 @@ header{
 }
 
 #fourth-section--text{
-	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-12;
+	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-12 md:pt-[1.6rem];
 }
 
 #fourth-section--button{
@@ -193,11 +201,11 @@ header{
 
 
 #fifth-section{
-	@apply sm:pt-5
+	@apply sm:pt-5 md:pt-12;
 }
 
 .card2{
-	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem];
+	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem] md:mx-[1.91rem] md:mb-[6.65rem];
 }
 
 .card2--image{
@@ -205,27 +213,26 @@ header{
 }
 
 .card2--inner-div{
-	@apply padding;
+	@apply padding md:flex md:px-0 md:mt-1;
 }
 
 .card2--heading-text{
-	@apply text-lg mt-[1.1rem];
-	font-size: 19px;
+	@apply text-lg mt-[1.1rem] md:flex-[0_1_50%] text-[19px] md:text-[22px] md:leading-[33px] md:mr-7;
 	font-family: "Whyte Medium", sans-serif;
 }
 
 .card2--text{
-	@apply text-sm leading-6 mt-3 tracking-wider sm:max-w-screen-sm;
+	@apply text-sm leading-6 mt-3 tracking-wider sm:max-w-screen-sm md:max-w-full md:flex-[0_1_50%];
 	font-family: 'Monument Grotesk Semi Mono', monospace;
 }
 
 
 #sixth-section{
-	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem];
+	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem] justify-center md:py-[11.5rem];
 }
 
 .sixth-section--logos{
-	@apply w-1/3
+	@apply w-1/3 md:w-1/5;
 }
 
 
@@ -234,20 +241,20 @@ header{
 }
 
 #seventh-section--text{
-	@apply mt-0 mb-[1.25rem] sm:mb-9;
+	@apply mt-0 mb-[1.25rem] sm:mb-9 md:mt-6;
 }
 
 
 footer{
-	@apply padding pt-40 tracking-wider sm:pt-[10.5rem];
+	@apply padding pt-40 tracking-wider sm:pt-[10.5rem] md:flex md:pb-10 md:pt-[11.45rem];
 }
 
 .footer--outer-divs{
-	@apply sm:flex;
+	@apply sm:flex md:min-w-[50%] md:last-of-type:flex-col md:last-of-type:justify-end md:last-of-type:items-end;
 }
 
 .footer--inner-divs{
-	@apply flex flex-col;
+	@apply flex flex-col md:first-of-type:flex-[0_1_70%] md:last-of-type:flex-[0_1_30%];
 }
 
 .footer-icons-div, .footer--inner-divs, #newsletter-link{
@@ -255,7 +262,7 @@ footer{
 }
 
 #footer-icons-div{
-	@apply pb-[3.35rem] pt-12
+	@apply pb-[3.35rem] pt-12 md:py-0;
 }
 
 .footer--icons{
@@ -263,7 +270,7 @@ footer{
 }
 
 .footer--icons:nth-child(2){
-	@apply mx-5 sm:mx-[7.185vw];
+	@apply mx-5 sm:mx-[7.185vw] md:mx-[6vw];
 }
 
 #newsletter-link{

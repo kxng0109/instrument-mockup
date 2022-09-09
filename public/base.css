@@ -622,10 +622,6 @@ video {
   z-index: 1;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -802,6 +798,16 @@ ion-icon {
 header {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
+}
+
+header {
   position: relative;
   z-index: 5;
   display: flex;
@@ -810,6 +816,14 @@ header {
   justify-content: space-between;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
 }
 
 #logo-text {
@@ -822,9 +836,39 @@ header {
   line-height: 2rem;
 }
 
+@media (min-width: 768px) {
+  #menu-btn {
+    display: none;
+  }
+}
+
+.header-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-nav {
+    display: flex;
+  }
+}
+
+.header-nav--links {
+  margin-left: 3.15rem;
+}
+
 #navbar {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  #navbar {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
+}
+
+#navbar {
   position: fixed;
   top: 0px;
   right: 0px;
@@ -899,9 +943,24 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  #video-container {
+    margin-left: 4.0625vw;
+    margin-right: 4.0625vw;
+    margin-top: 11.5rem;
+  }
+}
+
 #second-section {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  #second-section {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
 }
 
 #second-section--text,  #fourth-section--text,  #seventh-section--text {
@@ -921,6 +980,15 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  #second-section--text,  #fourth-section--text,  #seventh-section--text {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 12.85rem;
+    margin-bottom: 11.6rem;
+  }
+}
+
 #second-section--text, #fourth-section--text, #seventh-section--text{
   font-family: 'Whyte Book', sans-serif;
 }
@@ -928,6 +996,16 @@ header {
 .card {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
+}
+
+.card {
   margin-top: 60px;
   margin-bottom: 6rem;
 }
@@ -938,8 +1016,17 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  .card {
+    margin-left: 1.85rem;
+    margin-right: 1.85rem;
+    margin-bottom: 220px;
+  }
+}
+
 .card--image {
   aspect-ratio: 269/202;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1008,6 +1095,16 @@ header {
 #fourth-section {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  #fourth-section {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
+}
+
+#fourth-section {
   margin-top: 7.5rem;
   margin-bottom: 8.35rem;
 }
@@ -1036,6 +1133,12 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  #fourth-section--text {
+    padding-top: 1.6rem;
+  }
+}
+
 #fourth-section--button {
   margin-top: 1.65rem;
   margin-bottom: 1.65rem;
@@ -1048,6 +1151,12 @@ header {
 
   #fifth-section {
     padding-top: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #fifth-section {
+    padding-top: 3rem;
   }
 }
 
@@ -1066,6 +1175,14 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  .card2 {
+    margin-left: 1.91rem;
+    margin-right: 1.91rem;
+    margin-bottom: 6.65rem;
+  }
+}
+
 .card2--image {
   width: 100%;
 }
@@ -1075,11 +1192,34 @@ header {
   padding-right: 8.125vw;
 }
 
+@media (min-width: 768px) {
+  .card2--inner-div {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+    margin-top: 0.25rem;
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
 .card2--heading-text {
   margin-top: 1.1rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-size: 19px;
+}
+
+@media (min-width: 768px) {
+  .card2--heading-text {
+    margin-right: 1.75rem;
+    flex: 0 1 50%;
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
+.card2--heading-text{
   font-family: "Whyte Medium", sans-serif;
 }
 
@@ -1096,6 +1236,13 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  .card2--text {
+    max-width: 100%;
+    flex: 0 1 50%;
+  }
+}
+
 .card2--text{
   font-family: 'Monument Grotesk Semi Mono', monospace;
 }
@@ -1103,6 +1250,7 @@ header {
 #sixth-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-top: 8.5rem;
   padding-bottom: 3.5rem;
 }
@@ -1114,13 +1262,33 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  #sixth-section {
+    padding-top: 11.5rem;
+    padding-bottom: 11.5rem;
+  }
+}
+
 .sixth-section--logos {
   width: 33.333333%;
+}
+
+@media (min-width: 768px) {
+  .sixth-section--logos {
+    width: 20%;
+  }
 }
 
 #seventh-section {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  #seventh-section {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
 }
 
 @media (min-width: 500px) {
@@ -1140,9 +1308,25 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+  #seventh-section--text {
+    margin-top: 1.5rem;
+  }
+}
+
 footer {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding-left: 4.0625vw;
+    padding-right: 4.0625vw;
+  }
+}
+
+footer {
   padding-top: 10rem;
   letter-spacing: 0.05em;
 }
@@ -1151,15 +1335,47 @@ footer {
   footer {
     padding-top: 10.5rem;
   }
+}
 
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    padding-bottom: 2.5rem;
+    padding-top: 11.45rem;
+  }
+}
+
+@media (min-width: 500px) {
   .footer--outer-divs {
     display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--outer-divs {
+    min-width: 50%;
+  }
+
+  .footer--outer-divs:last-of-type {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 
 .footer--inner-divs {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer--inner-divs:first-of-type {
+    flex: 0 1 70%;
+  }
+
+  .footer--inner-divs:last-of-type {
+    flex: 0 1 30%;
+  }
 }
 
 @media (min-width: 500px) {
@@ -1171,6 +1387,13 @@ footer {
 #footer-icons-div {
   padding-bottom: 3.35rem;
   padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  #footer-icons-div {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .footer--icons {
@@ -1187,6 +1410,13 @@ footer {
   .footer--icons:nth-child(2) {
     margin-left: 7.185vw;
     margin-right: 7.185vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer--icons:nth-child(2) {
+    margin-left: 6vw;
+    margin-right: 6vw;
   }
 }
 
