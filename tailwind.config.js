@@ -5,10 +5,11 @@ module.exports = {
     screens:{
       'sm' : '500px',
       'md' :  '768px',
-      'lg' : '1024px',
-      'xl' : '1440px',
-      '2xl' : '1920px',
-      '3xl' : '2500px',
+      'lg' : '861px',
+      'xl' : '1024px',
+      '2xl' : '1440px',
+      '3xl' : '1920px',
+      '4xl' : '2500px',
     },
     extend: {
       colors:{

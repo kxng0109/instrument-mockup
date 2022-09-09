@@ -127,7 +127,7 @@ header{
 }
 
 .header-nav--links{
-	@apply ml-[3.15rem]
+	@apply ml-[3.15rem] lg:ml-[4.35rem];
 }
 
 #navbar{
@@ -192,7 +192,7 @@ header{
 }
 
 #fourth-section--text{
-	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-12 md:pt-[1.6rem];
+	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-[9.6vw]/*12*/ md:pt-[1.6rem];
 }
 
 #fourth-section--button{
@@ -246,23 +246,23 @@ header{
 
 
 footer{
-	@apply padding pt-40 tracking-wider sm:pt-[10.5rem] md:flex md:pb-10 md:pt-[11.45rem];
+	@apply pt-40 pb-[3.3rem]  tracking-wider sm:pt-[10.5rem] md:flex md:pb-10 md:pt-[11.45rem] md:padding;
 }
 
 .footer--outer-divs{
-	@apply sm:flex md:min-w-[50%] md:last-of-type:flex-col md:last-of-type:justify-end md:last-of-type:items-end;
+	@apply padding sm:last-of-type:px-5 sm:flex sm:last-of-type:items-end sm:last-of-type:justify-between md:min-w-[50%] md:last-of-type:flex-col md:last-of-type:justify-end md:last-of-type:items-end md:px-0 md:last-of-type:px-0;
 }
 
 .footer--inner-divs{
 	@apply flex flex-col md:first-of-type:flex-[0_1_70%] md:last-of-type:flex-[0_1_30%];
 }
 
-.footer-icons-div, .footer--inner-divs, #newsletter-link{
-	@apply sm:flex-[0_1_50%];
+#footer-icons-div, .footer--inner-divs{
+	@apply sm:flex-[0_1_50%] md:flex-none;
 }
 
 #footer-icons-div{
-	@apply pb-[3.35rem] pt-12 md:py-0;
+	@apply pt-12 sm:pt-[5.5rem] md:py-3;
 }
 
 .footer--icons{
@@ -282,5 +282,5 @@ footer{
 }
 
 .circular{
-	@apply border-white border rounded
+	@apply border-gray-600 border rounded-full sm:px-6 sm:py-[0.6rem] !important;
 }
