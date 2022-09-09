@@ -10,6 +10,21 @@
 	.padding{
 		@apply /*px-[26px]*/ px-[8.125vw]
 	}
+
+	.calculation{
+		font-size: calc(28px + 68*(100vw - 320px)/ 2180);
+		line-height: 1.17em;
+	}
+
+	.calculation2{
+		font-size: calc(19px + 13*(100vw - 320px)/2180);
+		line-height: 1.5em;
+	}
+
+	.calculation3{
+		font-size: calc(28px + 44*(100vw - 320px)/2180);
+		line-height: 1.17em;
+	}
 }
 
 /*Not using 357f, 6884, bc3c*/
@@ -83,7 +98,7 @@
 }
 
 .container{
-	@apply bg-black;
+	@apply bg-black max-w-full;
 }
 
 ion-icon{
@@ -131,27 +146,32 @@ header{
 }
 
 #second-section--text, #fourth-section--text, #seventh-section--text{
-	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem];
+	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center;
 	font-family: 'Whyte Book', sans-serif;
 }
 
 
 .card{
-	@apply mt-[60px] mb-24 padding
+	@apply mt-[60px] mb-24 padding sm:mb-[214px];
 }
 
 .card--image{
 	@apply aspect-[269/202] object-cover
 }
 
+.card--inner-div{
+	@apply sm:px-[8vw]/*12*/;
+}
+
 .card--text{
-	@apply text-xl my-[2.4rem];
+	@apply text-xl my-[2.4rem] sm:calculation2;
 	font-family: 'Whyte Book', sans-serif;	
 }
 
 .card--button{
-	@apply bg-white text-black py-[0.75rem] mt-1 rounded-3xl px-6 inline-flex items-center text-sm tracking-wider;
+	@apply bg-white text-black py-[0.75rem] mt-1 rounded-3xl px-6 inline-flex items-center text-sm tracking-wider hover:bg-gray-400;
 	font-family: 'Monument Grotesk Semi Mono', monospace;
+	transition: background linear 0.2s;
 }
 
 .card--button>ion-icon{
@@ -160,16 +180,28 @@ header{
 
 
 #fourth-section{
-	@apply padding my-[7.5rem] mb-[8.35rem]
+	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:mb-[214px] sm:mt-[12.25rem];
+}
+
+#fourth-section--text{
+	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-12;
 }
 
 #fourth-section--button{
-	@apply my-[1.65rem]
+	@apply my-[1.65rem] sm:mt-6;
 }
 
 
+#fifth-section{
+	@apply sm:pt-5
+}
+
 .card2{
-	@apply cursor-pointer mb-20;
+	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem];
+}
+
+.card2--image{
+	@apply w-full;
 }
 
 .card2--inner-div{
@@ -183,13 +215,13 @@ header{
 }
 
 .card2--text{
-	@apply text-sm leading-6 mt-3 tracking-wider;
+	@apply text-sm leading-6 mt-3 tracking-wider sm:max-w-screen-sm;
 	font-family: 'Monument Grotesk Semi Mono', monospace;
 }
 
 
 #sixth-section{
-	@apply flex items-center py-14
+	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem];
 }
 
 .sixth-section--logos{
@@ -198,20 +230,28 @@ header{
 
 
 #seventh-section{
-	@apply padding;
+	@apply padding sm:text-center;
 }
 
 #seventh-section--text{
-	@apply mt-0 mb-[1.25rem];
+	@apply mt-0 mb-[1.25rem] sm:mb-9;
 }
 
 
 footer{
-	@apply padding pt-40 tracking-wider
+	@apply padding pt-40 tracking-wider sm:pt-[10.5rem];
+}
+
+.footer--outer-divs{
+	@apply sm:flex;
 }
 
 .footer--inner-divs{
-	@apply flex flex-col
+	@apply flex flex-col;
+}
+
+.footer-icons-div, .footer--inner-divs, #newsletter-link{
+	@apply sm:flex-[0_1_50%];
 }
 
 #footer-icons-div{
@@ -223,7 +263,7 @@ footer{
 }
 
 .footer--icons:nth-child(2){
-	@apply mx-5
+	@apply mx-5 sm:mx-[7.185vw];
 }
 
 #newsletter-link{
@@ -232,4 +272,8 @@ footer{
 
 #newsletter-link--arrow{
 	@apply text-xs ml-[0.9rem]
+}
+
+.circular{
+	@apply border-white border rounded
 }

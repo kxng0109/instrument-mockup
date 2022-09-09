@@ -776,6 +776,7 @@ video {
 }
 
 .container {
+  max-width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
@@ -911,8 +912,12 @@ header {
 }
 
 @media (min-width: 500px) {
-  #second-section--text,  #fourth-section--text,  #seventh-section--text {
+  #second-section--text,  #fourth-section--text,  #seventh-section--text{
+    font-size: calc(28px + 68*(100vw - 320px)/ 2180);
+    line-height: 1.17em;
     margin-top: 12.25rem;
+    margin-bottom: 11rem;
+    text-align: center;
   }
 }
 
@@ -927,10 +932,23 @@ header {
   margin-bottom: 6rem;
 }
 
+@media (min-width: 500px) {
+  .card {
+    margin-bottom: 214px;
+  }
+}
+
 .card--image {
   aspect-ratio: 269/202;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 500px) {
+  .card--inner-div {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
 }
 
 .card--text {
@@ -938,6 +956,16 @@ header {
   margin-bottom: 2.4rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+@media (min-width: 500px) {
+  .card--text{
+    font-size: calc(19px + 13*(100vw - 320px)/2180);
+    line-height: 1.5em;
+  }
+}
+
+.card--text{
   font-family: 'Whyte Book', sans-serif;
 }
 
@@ -957,7 +985,16 @@ header {
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.card--button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.card--button{
   font-family: 'Monument Grotesk Semi Mono', monospace;
+  transition: background linear 0.2s;
 }
 
 .card--button>ion-icon {
@@ -975,14 +1012,62 @@ header {
   margin-bottom: 8.35rem;
 }
 
+@media (min-width: 500px) {
+  #fourth-section {
+    margin-bottom: 214px;
+    margin-top: 12.25rem;
+    text-align: center;
+  }
+}
+
+#fourth-section--text {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 500px) {
+  #fourth-section--text{
+    font-size: calc(28px + 44*(100vw - 320px)/2180);
+    line-height: 1.17em;
+    margin-top: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
 #fourth-section--button {
   margin-top: 1.65rem;
   margin-bottom: 1.65rem;
 }
 
+@media (min-width: 500px) {
+  #fourth-section--button {
+    margin-top: 1.5rem;
+  }
+
+  #fifth-section {
+    padding-top: 1.25rem;
+  }
+}
+
 .card2 {
   margin-bottom: 5rem;
   cursor: pointer;
+}
+
+.card2:last-of-type {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 500px) {
+  .card2 {
+    margin-bottom: 5.65rem;
+  }
+}
+
+.card2--image {
+  width: 100%;
 }
 
 .card2--inner-div {
@@ -1003,14 +1088,30 @@ header {
   font-size: 0.875rem;
   line-height: 1.5rem;
   letter-spacing: 0.05em;
+}
+
+@media (min-width: 500px) {
+  .card2--text {
+    max-width: 500px;
+  }
+}
+
+.card2--text{
   font-family: 'Monument Grotesk Semi Mono', monospace;
 }
 
 #sixth-section {
   display: flex;
   align-items: center;
-  padding-top: 3.5rem;
+  padding-top: 8.5rem;
   padding-bottom: 3.5rem;
+}
+
+@media (min-width: 500px) {
+  #sixth-section {
+    padding-top: 9.2rem;
+    padding-bottom: 9.2rem;
+  }
 }
 
 .sixth-section--logos {
@@ -1022,9 +1123,21 @@ header {
   padding-right: 8.125vw;
 }
 
+@media (min-width: 500px) {
+  #seventh-section {
+    text-align: center;
+  }
+}
+
 #seventh-section--text {
   margin-top: 0px;
   margin-bottom: 1.25rem;
+}
+
+@media (min-width: 500px) {
+  #seventh-section--text {
+    margin-bottom: 2.25rem;
+  }
 }
 
 footer {
@@ -1034,9 +1147,25 @@ footer {
   letter-spacing: 0.05em;
 }
 
+@media (min-width: 500px) {
+  footer {
+    padding-top: 10.5rem;
+  }
+
+  .footer--outer-divs {
+    display: flex;
+  }
+}
+
 .footer--inner-divs {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .footer-icons-div,  .footer--inner-divs,  #newsletter-link {
+    flex: 0 1 50%;
+  }
 }
 
 #footer-icons-div {
@@ -1052,6 +1181,13 @@ footer {
 .footer--icons:nth-child(2) {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+@media (min-width: 500px) {
+  .footer--icons:nth-child(2) {
+    margin-left: 7.185vw;
+    margin-right: 7.185vw;
+  }
 }
 
 #newsletter-link {
@@ -1074,4 +1210,11 @@ footer {
   margin-left: 0.9rem;
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.circular {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
