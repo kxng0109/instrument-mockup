@@ -102,7 +102,7 @@
 }
 
 ion-icon{
-	@apply text-white;
+	@apply text-white cursor-pointer;
 }
 
 #cookies{
@@ -135,8 +135,16 @@ header{
 }
 
 .links{
-	@apply text-sm leading-6 uppercase py-[0.78rem] w-fit block relative before:content-['['] before:absolute before:-left-[1.1rem] before:text-gray-500 after:absolute after:-right-[1.1rem] after:content-[']'] after:text-gray-500 transition-all;
+	@apply text-sm leading-6 uppercase py-[0.78rem] w-fit block relative before:content-['['] before:absolute before:-left-[1.1rem] before:text-gray-500 after:absolute after:-right-[1.1rem] after:content-[']'] after:text-gray-500 transition-all duration-300 before:transition-all before:duration-300 after:transition-all after:duration-300 after:opacity-0 before:opacity-0;
 	font-family: 'Monument Grotesk Mono', monospace;
+}
+
+#home-link{
+	@apply after:opacity-100 before:opacity-100
+}
+
+.links:hover:before, .links:hover:after{
+	opacity: 1;
 }
 
 .nav-links{
@@ -146,7 +154,7 @@ header{
 
 
 #video-container{
-	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem]
+	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem] lg:mt-[12.5rem];
 }
 
 #second-section{
@@ -154,30 +162,38 @@ header{
 }
 
 #second-section--text, #fourth-section--text, #seventh-section--text{
-	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center md:mx-16 md:mt-[12.85rem] md:mb-[11.6rem];
+	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center md:mx-16 md:mt-[12.85rem] md:mb-[11.6rem] lg:mx-[12.5vw] lg:mt-[13.6rem] lg:mb-[12.45rem];
 	font-family: 'Whyte Book', sans-serif;
 }
 
 
 .card{
-	@apply mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px];
+	@apply mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px] lg:flex lg:mx-0 lg:items-center lg:mb-[195px];
+}
+
+#second-card{
+	@apply lg:flex-row-reverse lg:items-end;
+}
+
+#second-card .card--inner-div{
+	@apply lg:pl-[4vw] lg:pr-[9vw];
 }
 
 .card--image{
-	@apply aspect-[269/202] object-cover w-full
+	@apply aspect-[269/202] object-cover w-full lg:w-[52%];
 }
 
 .card--inner-div{
-	@apply sm:px-[8vw]/*12*/;
+	@apply sm:px-[8vw]/*12*/ lg:pr-[5vw];
 }
 
 .card--text{
-	@apply text-xl my-[2.4rem] sm:calculation2;
+	@apply text-xl my-[2.4rem] sm:calculation2 lg:mt-0;
 	font-family: 'Whyte Book', sans-serif;	
 }
 
 .card--button{
-	@apply bg-white text-black py-[0.75rem] mt-1 rounded-3xl px-6 inline-flex items-center text-sm tracking-wider hover:bg-gray-400;
+	@apply bg-white text-black py-[0.75rem] mt-1 rounded-3xl px-6 inline-flex items-center text-sm tracking-wider hover:bg-gray-400 lg:py-4 lg:px-8;
 	font-family: 'Monument Grotesk Semi Mono', monospace;
 	transition: background linear 0.2s;
 }
@@ -188,7 +204,7 @@ header{
 
 
 #fourth-section{
-	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:mb-[214px] sm:mt-[12.25rem];
+	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:mb-[13.375rem] sm:mt-[12.25rem] lg:mb-44;
 }
 
 #fourth-section--text{
@@ -201,11 +217,11 @@ header{
 
 
 #fifth-section{
-	@apply sm:pt-5 md:pt-12;
+	@apply sm:pt-5 md:pt-12 lg:flex lg:pt-0 lg:mx-10 lg:gap-x-10;
 }
 
 .card2{
-	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem] md:mx-[1.91rem] md:mb-[6.65rem];
+	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem] md:mx-[1.91rem] md:mb-[6.65rem] lg:mx-0;
 }
 
 .card2--image{
@@ -213,22 +229,22 @@ header{
 }
 
 .card2--inner-div{
-	@apply padding md:flex md:px-0 md:mt-1;
+	@apply padding md:flex md:px-0 md:mt-1 lg:flex-col lg:px-1;
 }
 
 .card2--heading-text{
-	@apply text-lg mt-[1.1rem] md:flex-[0_1_50%] text-[19px] md:text-[22px] md:leading-[33px] md:mr-7;
+	@apply text-lg mt-[1.1rem] md:flex-[0_1_50%] text-[19px] md:text-[22px] md:leading-[33px] md:mr-7 lg:text-[23px] lg:leading-[35px];
 	font-family: "Whyte Medium", sans-serif;
 }
 
 .card2--text{
-	@apply text-sm leading-6 mt-3 tracking-wider sm:max-w-screen-sm md:max-w-full md:flex-[0_1_50%];
+	@apply text-sm leading-6 mt-3 tracking-wider sm:max-w-screen-sm /*md:max-w-full*//*Don't know why that exists*/ md:flex-[0_1_50%];
 	font-family: 'Monument Grotesk Semi Mono', monospace;
 }
 
 
 #sixth-section{
-	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem] justify-center md:py-[11.5rem];
+	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem] justify-center md:py-[11.5rem] lg:py-32;
 }
 
 .sixth-section--logos{
@@ -241,20 +257,20 @@ header{
 }
 
 #seventh-section--text{
-	@apply mt-0 mb-[1.25rem] sm:mb-9 md:mt-6;
+	@apply mt-0 mb-[1.25rem] sm:mb-9 md:mt-6 lg:mt-[5.7rem];
 }
 
 
 footer{
-	@apply pt-40 pb-[3.3rem]  tracking-wider sm:pt-[10.5rem] md:flex md:pb-10 md:pt-[11.45rem] md:padding;
+	@apply pt-40 pb-[3.3rem]  tracking-wider sm:pt-[10.5rem] md:flex md:pb-10 md:pt-[11.45rem] md:padding lg:pt-[12.5rem];
 }
 
 .footer--outer-divs{
-	@apply padding sm:last-of-type:px-5 sm:flex sm:last-of-type:items-end sm:last-of-type:justify-between md:min-w-[50%] md:last-of-type:flex-col md:last-of-type:justify-end md:last-of-type:items-end md:px-0 md:last-of-type:px-0;
+	@apply padding sm:last-of-type:px-5 sm:flex sm:last-of-type:items-end sm:last-of-type:justify-between md:min-w-[50%] md:last-of-type:flex-col md:last-of-type:justify-end md:last-of-type:items-end md:px-0 md:last-of-type:px-0 lg:last-of-type:flex-row
 }
 
 .footer--inner-divs{
-	@apply flex flex-col md:first-of-type:flex-[0_1_70%] md:last-of-type:flex-[0_1_30%];
+	@apply flex flex-col md:first-of-type:flex-[0_1_70%] md:last-of-type:flex-[0_1_30%] lg:first-of-type:flex-[0_1_52%] lg:last-of-type:flex-[0_1_48%];
 }
 
 #footer-icons-div, .footer--inner-divs{
@@ -270,7 +286,7 @@ footer{
 }
 
 .footer--icons:nth-child(2){
-	@apply mx-5 sm:mx-[7.185vw] md:mx-[6vw];
+	@apply mx-5 sm:mx-[7.185vw] md:mx-[6vw] lg:mx-[4.4vw];
 }
 
 #newsletter-link{
@@ -282,5 +298,5 @@ footer{
 }
 
 .circular{
-	@apply border-gray-600 border rounded-full sm:px-6 sm:py-[0.6rem] !important;
+	@apply border-gray-600 border rounded-full sm:px-6 sm:py-[0.6rem] lg:mr-10 lg:px-8 lg:py-4 hover:opacity-60 duration-200 !important;
 }
