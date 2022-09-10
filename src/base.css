@@ -25,6 +25,14 @@
 		font-size: calc(28px + 44*(100vw - 320px)/2180);
 		line-height: 1.17em;
 	}
+
+	.calculations4{
+		margin-top: calc(160px + 120*(100vw - 320px)/ 2180);
+	}
+
+	.calculation5{
+		margin-block: calc(160px + 120*(100vw - 320px)/ 2180);
+	}
 }
 
 /*Not using 357f, 6884, bc3c*/
@@ -127,7 +135,7 @@ header{
 }
 
 .header-nav--links{
-	@apply ml-[3.15rem] lg:ml-[4.35rem];
+	@apply ml-[3.15rem] nt:ml-[4.35rem];
 }
 
 #navbar{
@@ -154,7 +162,7 @@ header{
 
 
 #video-container{
-	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem] lg:mt-[12.5rem];
+	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem] lg:calculations4 /*lg:mt-*//*[12.5rem]*/;
 }
 
 #second-section{
@@ -162,7 +170,7 @@ header{
 }
 
 #second-section--text, #fourth-section--text, #seventh-section--text{
-	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center md:mx-16 md:mt-[12.85rem] md:mb-[11.6rem] lg:mx-[12.5vw] lg:mt-[13.6rem] lg:mb-[12.45rem];
+	@apply text-[1.75rem] leading-8 mt-[4.6rem] tracking-[-0.035em] sm:mt-[12.25rem] sm:mb-44 sm:calculation sm:text-center md:mx-16 md:mt-[12.85rem] md:mb-[11.6rem] lg:mx-[12.5vw] lg:mt-[13.6rem] lg:mb-[12.45rem] xl:mx-52 xl:mt-[15rem] xl:mb-[14rem];
 	font-family: 'Whyte Book', sans-serif;
 }
 
@@ -172,19 +180,19 @@ header{
 }
 
 #second-card{
-	@apply lg:flex-row-reverse lg:items-end;
+	@apply lg:flex-row-reverse;
 }
 
 #second-card .card--inner-div{
-	@apply lg:pl-[4vw] lg:pr-[9vw];
+	@apply lg:pl-[4vw] lg:pr-[9vw] xl:pr-[11vw];
 }
 
 .card--image{
-	@apply aspect-[269/202] object-cover w-full lg:w-[52%];
+	@apply aspect-[269/202] object-cover w-full lg:w-[52%] lg:min-w-[52%];
 }
 
 .card--inner-div{
-	@apply sm:px-[8vw]/*12*/ lg:pr-[5vw];
+	@apply sm:px-[8vw]/*12*/ lg:pr-[4.6vw] xl:pl-[12.1vw];
 }
 
 .card--text{
@@ -204,7 +212,7 @@ header{
 
 
 #fourth-section{
-	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:mb-[13.375rem] sm:mt-[12.25rem] lg:mb-44;
+	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:mb-[13.375rem] sm:mt-[12.25rem] lg:mb-44 xl:calculation5;
 }
 
 #fourth-section--text{
@@ -212,12 +220,12 @@ header{
 }
 
 #fourth-section--button{
-	@apply my-[1.65rem] sm:mt-6;
+	@apply my-[1.65rem] sm:mt-6 xl:mb-0;
 }
 
 
 #fifth-section{
-	@apply sm:pt-5 md:pt-12 lg:flex lg:pt-0 lg:mx-10 lg:gap-x-10;
+	@apply sm:pt-5 md:pt-12 lg:flex lg:pt-0 lg:mx-[3.9177vw]/*10*/ lg:gap-x-10;
 }
 
 .card2{
