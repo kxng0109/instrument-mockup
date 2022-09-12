@@ -30,7 +30,11 @@
 		margin-top: calc(160px + 120*(100vw - 320px)/ 2180);
 	}
 
-	.paddingcalculation{
+	.padding-calculation-small{
+		padding-top: calc(80px + 120*(100vw - 320px)/ 2180);
+	}
+
+	.padding-calculation-large{
 		padding-top: calc(160px + 120*(100vw - 320px)/ 2180);
 	}
 
@@ -166,7 +170,7 @@ header{
 
 
 #video-container{
-	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem] lg:calculations4 /*lg:mt-*//*[12.5rem]*/;
+	@apply relative mt-14 sm:mt-52 md:mx-[4.0625vw] md:mt-[11.5rem] lg:calculations4;
 }
 
 #second-section{
@@ -191,6 +195,10 @@ header{
 	@apply lg:flex-row-reverse;
 }
 
+#third-card{
+	@apply sm:mb-10 md:mb-[2.1rem] lg:mb-0;
+}
+
 #second-card .card--inner-div{
 	@apply lg:pl-[4vw] lg:pr-[9vw] xl:pr-[11vw] 2xl:pr-[12vw] 2xl:pl-[7.8vw];
 }
@@ -200,7 +208,7 @@ header{
 }
 
 .card--inner-div{
-	@apply sm:px-[8vw]/*12*/ lg:pr-[4.6vw] xl:pl-[12.1vw] 2xl:pr-[8.3vw];
+	@apply sm:px-[8vw] lg:pr-[4.6vw] xl:pl-[12.1vw] 2xl:pr-[8.3vw];
 }
 
 .card--text{
@@ -220,24 +228,28 @@ header{
 
 
 #fourth-section{
-	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:mb-[13.375rem] sm:mt-[12.25rem] lg:mb-44 xl:calculation5;
+	@apply padding my-[7.5rem] mb-[8.35rem] sm:text-center sm:padding-calculation-large xl:pt-0 xl:calculation5;
 }
 
 #fourth-section--text{
-	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-[9.6vw]/*12*/ md:pt-[1.6rem] 2xl:px-[16vw];
+	@apply mb-0 sm:px-10 sm:mt-0 sm:py-4 sm:calculation3 sm:px-[9.6vw] md:pt-[1.6rem] lg:pt-[1.3rem] 2xl:px-[11vw];
 }
 
 #fourth-section--button{
-	@apply my-[1.65rem] sm:mt-6 xl:mb-0;
+	@apply my-[1.65rem] sm:mt-6 sm:mb-0 xl:mb-0;
 }
 
 
 #fifth-section{
-	@apply sm:pt-5 md:pt-12 lg:flex lg:pt-0 lg:mx-[3.9177vw] lg:gap-x-[3.90625vw] 2xl:mx-[8vw];
+	@apply sm:padding-calculation-large md:pt-12 lg:flex lg:pt-0 lg:mx-[3.9177vw] lg:gap-x-[3.90625vw] 2xl:mx-[8vw];
 }
 
 .card2{
-	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem] md:mx-[1.91rem] md:mb-[6.65rem] lg:mx-0 2xl:mb-0;
+	@apply cursor-pointer mb-20 last-of-type:mb-0 sm:mb-[5.65rem] md:mx-[1.91rem] md:mb-[6.65rem] lg:mx-0 lg:mb-0;
+}
+
+#first-card2{
+	@apply sm:mt-[5.65rem] md:mt-[6.65rem] lg:mt-0;
 }
 
 .card2--image{
@@ -260,7 +272,7 @@ header{
 
 
 #sixth-section{
-	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem] justify-center md:py-[11.5rem] lg:py-32 xl:pt-[7.3rem] xl:pb-[9.4rem] 2xl:paddingcalculation 2xl:pb-0;
+	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem] justify-center md:py-[11.5rem] lg:padding-calculation-large lg:pb-0;
 }
 
 .sixth-section--logos{
@@ -269,16 +281,16 @@ header{
 
 
 #seventh-section{
-	@apply padding sm:text-center 2xl:paddingcalculation;
+	@apply padding sm:text-center md:padding-calculation-large;
 }
 
 #seventh-section--text{
-	@apply mt-0 mb-[1.25rem] sm:mb-9 md:mt-6 lg:mt-[5.7rem] 2xl:mt-4;
+	@apply mt-0 mb-[1.25rem] sm:mb-9 md:mt-6 lg:mt-[1.3rem] 2xl:mt-4;
 }
 
 
 footer{
-	@apply pt-40 pb-[3.3rem]  tracking-wider sm:pt-[10.5rem] md:flex md:pb-10 md:pt-[11.45rem] md:padding lg:pt-[12.5rem] xl:paddingcalculation;
+	@apply padding-calculation-large pb-[3.3rem] tracking-wider md:flex md:pb-10 md:padding;
 }
 
 .footer--outer-divs{
