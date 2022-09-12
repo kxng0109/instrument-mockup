@@ -147,7 +147,7 @@ header{
 }
 
 #navbar{
-	@apply fixed inset-0 z-4 bg-black pb-[15vh] flex flex-col justify-end padding hidden
+	@apply fixed inset-0 z-4 bg-black pb-[15vh] flex-col justify-end padding hidden
 }
 
 .links{
