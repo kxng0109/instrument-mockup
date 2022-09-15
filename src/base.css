@@ -191,8 +191,12 @@ header{
 }
 
 
+.changeOpacity{
+	@apply opacity-100 !important;
+}
+
 .card{
-	@apply mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px] lg:flex lg:mx-0 lg:items-center lg:mb-[195px] 2xl:px-[8.167vw];
+	@apply opacity-0 mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px] lg:flex lg:mx-0 lg:items-center lg:mb-[195px] 2xl:px-[8.167vw];
 }
 
 #second-card{
@@ -276,7 +280,7 @@ header{
 
 
 #sixth-section{
-	@apply flex items-center pt-[8.5rem] pb-[3.5rem] sm:py-[9.2rem] justify-center md:py-[11.5rem] lg:padding-calculation-large lg:pb-0;
+	@apply flex items-center pt-[8.5rem] pb-[3.5rem] overflow-x-hidden sm:py-[9.2rem] justify-center md:py-[11.5rem] lg:padding-calculation-large lg:pb-0;
 }
 
 .sixth-section--div{

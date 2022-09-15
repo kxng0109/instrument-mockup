@@ -13,12 +13,39 @@ const secondLogoDiv = document.querySelector('#second-logo');
 const secondDivLogos = secondLogoDiv.querySelectorAll('.sixth--section--logos');
 const thirdLogoDiv = document.querySelector('#third-logo');
 const thirdDivLogos = thirdLogoDiv.querySelectorAll('.sixth--section--logos');
+const changeImage = document.querySelectorAll('.js-changeImage');
+const changeVideo = document.querySelector('.js-changeVideo');
 let firstPreviousImage, secondPreviousImage, thirdPreviousImage;
 //Generate a random number based on the number of images in that div and returns a random element
 let randomElement = (theDivLogos) => {
     let randomNumber = Math.floor(Math.random() * theDivLogos.length);
     return theDivLogos[randomNumber];
 };
+let changeSrc = () => {
+    let changer = (directory, index) => {
+        switch (directory.includes('images')) {
+            case true:
+                // @ts-ignore
+                changeImage[index].setAttribute('src', directory);
+                break;
+            default:
+                changeVideo.setAttribute('src', directory);
+                break;
+        }
+    };
+    switch (true) {
+        case screen.width >= 1920:
+            changer('./images/lady_beside_leaf-hd.avif', 0);
+            changer('./images/eye_drawing-hd.avif', 1);
+            changer('./images/holding_phone-hd.avif', 2);
+            changer('./images/e-hd.avif', 3);
+            changer('./images/life-hd.avif', 4);
+            changer('./videos/preloaded_video_720p.mp4', undefined);
+            break;
+    }
+};
+changeSrc();
+window.onresize = () => changeSrc();
 menuBtn.onclick = () => {
     let displayValue = getComputedStyle(navBar, undefined).getPropertyValue('display');
     displayValue == 'none' ?
@@ -34,7 +61,6 @@ playBtn.onclick = () => {
     /*Video needs to automatically play*/
 };
 const logoAnimation = (previousElement, currentElement, theLogoDiv) => {
-    console.log(previousElement);
     switch (true) {
         case previousElement == undefined || previousElement == null:
             currentElement.classList.add('show');

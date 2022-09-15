@@ -12,6 +12,8 @@ const secondLogoDiv = document.querySelector('#second-logo') as HTMLDivElement;
 const secondDivLogos = secondLogoDiv.querySelectorAll('.sixth--section--logos') as NodeListOf<HTMLImageElement>;
 const thirdLogoDiv = document.querySelector('#third-logo') as HTMLDivElement;
 const thirdDivLogos = thirdLogoDiv.querySelectorAll('.sixth--section--logos') as NodeListOf<HTMLImageElement>;
+const changeImage = document.querySelectorAll('.js-changeImage') as NodeListOf<HTMLImageElement>;
+const changeVideo = document.querySelector('.js-changeVideo') as HTMLVideoElement;
 let firstPreviousImage:HTMLImageElement, secondPreviousImage:HTMLImageElement, thirdPreviousImage:HTMLImageElement;
 
 //Generate a random number based on the number of images in that div and returns a random element
@@ -19,6 +21,36 @@ let randomElement = (theDivLogos:NodeListOf<HTMLImageElement>) =>{
 	let randomNumber = Math.floor(Math.random() * theDivLogos.length);
 	return theDivLogos[randomNumber]
 }
+
+
+let changeSrc = () =>{
+	let changer = (directory:string, index:number|undefined) =>{
+		switch(directory.includes('images')){
+			case true:
+				// @ts-ignore
+				changeImage[index].setAttribute('src', directory);
+			break;
+			default:
+				changeVideo.setAttribute('src', directory);
+			break;
+		}
+	}
+
+	switch(true){
+		case screen.width >= 1920:
+			changer('./images/lady_beside_leaf-hd.avif', 0);
+			changer('./images/eye_drawing-hd.avif', 1);
+			changer('./images/holding_phone-hd.avif', 2);
+			changer('./images/e-hd.avif', 3);
+			changer('./images/life-hd.avif', 4);
+			changer('./videos/preloaded_video_720p.mp4', undefined);
+		break;
+	}
+}
+
+changeSrc();
+
+window.onresize = () => changeSrc();
 
 menuBtn.onclick = () =>{
 	let displayValue = getComputedStyle(navBar, undefined).getPropertyValue('display');
@@ -42,7 +74,6 @@ playBtn.onclick = () =>{
 }
 
 const logoAnimation = (previousElement:HTMLImageElement, currentElement:HTMLImageElement, theLogoDiv:NodeListOf<HTMLImageElement>) =>{
-		console.log(previousElement)
 	switch(true){
 		case previousElement == undefined || previousElement == null:
 			currentElement.classList.add('show');

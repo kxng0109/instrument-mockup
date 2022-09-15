@@ -1077,6 +1077,10 @@ header {
   }
 }
 
+.changeOpacity {
+  opacity: 1 !important;
+}
+
 .card {
   padding-left: 8.125vw;
   padding-right: 8.125vw;
@@ -1092,6 +1096,7 @@ header {
 .card {
   margin-top: 60px;
   margin-bottom: 6rem;
+  opacity: 0;
 }
 
 @media (min-width: 500px) {
@@ -1549,6 +1554,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
   padding-top: 8.5rem;
   padding-bottom: 3.5rem;
 }
