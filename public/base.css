@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.1.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -349,13 +349,6 @@ textarea {
 */
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -1851,41 +1844,43 @@ footer{
   display: none;
 }
 
+@media (min-width: 500px) {
+  #newsletter-link {
+    border-radius: 9999px !important;
+    border-width: 1px !important;
+    --tw-border-opacity: 1 !important;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity)) !important;
+    transition-duration: 200ms !important;
+  }
+
+  #newsletter-link:hover {
+    opacity: 0.6 !important;
+  }
+
+  @media (min-width: 500px) {
+    #newsletter-link {
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+      padding-top: 0.6rem !important;
+      padding-bottom: 0.6rem !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #newsletter-link {
+      margin-right: 2.5rem !important;
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+  }
+}
+
 #newsletter-link--arrow {
   margin-left: 0.9rem;
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.circular {
-  border-radius: 9999px !important;
-  border-width: 1px !important;
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity)) !important;
-  transition-duration: 200ms !important;
-}
-
-.circular:hover {
-  opacity: 0.6 !important;
-}
-
-@media (min-width: 500px) {
-  .circular {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
-    padding-top: 0.6rem !important;
-    padding-bottom: 0.6rem !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .circular {
-    margin-right: 2.5rem !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-  }
 }
 
 .hover\:w-\[5\.5rem\]:hover {

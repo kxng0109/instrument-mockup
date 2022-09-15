@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components{
+	.circular{
+		@apply border-gray-600 border rounded-full sm:px-6 sm:py-[0.6rem] lg:mr-10 lg:px-8 lg:py-4 hover:opacity-60 duration-200 !important;
+	}
+
 	.testing{
 		@apply outline-red-700 outline-1 outline;
 	}
@@ -326,13 +330,9 @@ footer{
 }
 
 #newsletter-link{
-	@apply before:hidden after:hidden pt-4 inline-flex items-center;
+	@apply before:hidden after:hidden pt-4 inline-flex items-center sm:circular;
 }
 
 #newsletter-link--arrow{
 	@apply text-xs ml-[0.9rem]
-}
-
-.circular{
-	@apply border-gray-600 border rounded-full sm:px-6 sm:py-[0.6rem] lg:mr-10 lg:px-8 lg:py-4 hover:opacity-60 duration-200 !important;
 }
