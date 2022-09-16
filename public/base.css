@@ -695,7 +695,7 @@ video {
 @font-face {
   font-family: Whyte Book;
 
-  src: url(./fonts/4523966.woff2) format("woff2");
+  src: url(./assets/fonts/4523966.woff2) format("woff2");
 
   font-style: normal;
 
@@ -707,7 +707,7 @@ video {
 @font-face {
   font-family: Whyte Thin;
 
-  src: url(./fonts/82c30f5.woff2) format("woff2");
+  src: url(./assets/fonts/82c30f5.woff2) format("woff2");
 
   font-style: normal;
 
@@ -719,7 +719,7 @@ video {
 @font-face {
   font-family: Whyte Medium;
 
-  src: url(./fonts/f68ea8a.woff2) format("woff2");
+  src: url(./assets/fonts/f68ea8a.woff2) format("woff2");
 
   font-style: normal;
 
@@ -731,7 +731,7 @@ video {
 @font-face {
   font-family: Whyte Inktrap Book;
 
-  src: url(./fonts/2a33d70.woff2) format("woff2");
+  src: url(./assets/fonts/2a33d70.woff2) format("woff2");
 
   font-style: normal;
 
@@ -743,7 +743,7 @@ video {
 @font-face {
   font-family: Whyte Inktrap Medium;
 
-  src: url(./fonts/36262b2.woff2) format("woff2");
+  src: url(./assets/fonts/36262b2.woff2) format("woff2");
 
   font-style: normal;
 
@@ -755,7 +755,7 @@ video {
 @font-face {
   font-family: Whyte Inktrap Bold;
 
-  src: url(./fonts/72acf0e.woff2) format("woff2");
+  src: url(./assets/fonts/72acf0e.woff2) format("woff2");
 
   font-style: normal;
 
@@ -767,7 +767,7 @@ video {
 @font-face {
   font-family: Monument Grotesk Mono;
 
-  src: url(./fonts/e21b9b1.woff2) format("woff2");
+  src: url(./assets/fonts/e21b9b1.woff2) format("woff2");
 
   font-style: normal;
 
@@ -779,7 +779,7 @@ video {
 @font-face {
   font-family: Monument Grotesk Semi Mono;
 
-  src: url(./fonts/00b834c.woff2) format("woff2");
+  src: url(./assets/fonts/00b834c.woff2) format("woff2");
 
   font-style: normal;
 

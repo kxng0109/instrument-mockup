@@ -5,7 +5,7 @@ const navBar = document.querySelector('#navbar') as HTMLDivElement;
 const playBtn = document.querySelector('#playBtn') as HTMLButtonElement;
 const videoTemplate = document.querySelector('#video-template') as HTMLVideoElement;
 const iframeVideo = document.querySelector('#iframe-video') as HTMLIFrameElement;
-const whitePlayBg = document.querySelector('#white-play-bg') as HTMLDivElement;
+const whitePlayBgIcon = document.querySelector('#white-play-bg') as HTMLDivElement;
 const firstLogoDiv = document.querySelector('#first-logo') as HTMLDivElement;
 const firstDivLogos = firstLogoDiv.querySelectorAll('.sixth--section--logos') as NodeListOf<HTMLImageElement>;
 const secondLogoDiv = document.querySelector('#second-logo') as HTMLDivElement;
@@ -22,9 +22,8 @@ let randomElement = (theDivLogos:NodeListOf<HTMLImageElement>) =>{
 	return theDivLogos[randomNumber]
 }
 
-
-let changeSrc = () =>{
-	let changer = (directory:string, index:number|undefined) =>{
+let changeSource = () =>{
+	let sourceChangerFunction = (directory:string, index:number|undefined) =>{
 		switch(directory.includes('images')){
 			case true:
 				// @ts-ignore
@@ -36,56 +35,46 @@ let changeSrc = () =>{
 		}
 	}
 
-	switch(true){
-		case screen.width >= 1920:
-			changer('./images/lady_beside_leaf-hd.avif', 0);
-			changer('./images/eye_drawing-hd.avif', 1);
-			changer('./images/holding_phone-hd.avif', 2);
-			changer('./images/e-hd.avif', 3);
-			changer('./images/life-hd.avif', 4);
-			changer('./videos/preloaded_video_720p.mp4', undefined);
-		break;
+	if(screen.width >= 1920){
+		sourceChangerFunction('./assets/images/lady_beside_leaf-hd.avif', 0);
+		sourceChangerFunction('./assets/images/eye_drawing-hd.avif', 1);
+		sourceChangerFunction('./assets/images/holding_phone-hd.avif', 2);
+		sourceChangerFunction('./assets/images/e-hd.avif', 3);
+		sourceChangerFunction('./assets/images/life-hd.avif', 4);
+		sourceChangerFunction('./assets/videos/preloaded_video_720p.mp4', undefined);
 	}
 }
 
-changeSrc();
+changeSource();
 
-window.onresize = () => changeSrc();
+window.onresize = () => changeSource();
 
 menuBtn.onclick = () =>{
-	let displayValue = getComputedStyle(navBar, undefined).getPropertyValue('display');
+	let navBarDisplayValue = getComputedStyle(navBar, undefined).getPropertyValue('display');
 
-	displayValue == 'none' ? 
-	(
-		navBar.style.display = 'flex',
-		menuBtn.setAttribute('name', 'close')
-	) : 
-	(
-		navBar.style.display = 'none',
-		menuBtn.setAttribute('name', 'menu')
-	)
+	if(navBarDisplayValue == 'none'){
+		navBar.style.display = 'flex';
+		menuBtn.setAttribute('name', 'close')	;
+	} else{
+		navBar.style.display = 'none';
+		menuBtn.setAttribute('name', 'menu')		
+	}
 }
 
 playBtn.onclick = () =>{
 	playBtn.classList.add('hidden');
 	videoTemplate.classList.add('hidden');
-	whitePlayBg.classList.add('hidden');
+	whitePlayBgIcon.classList.add('hidden');
 	/*Video needs to automatically play*/
 }
 
 const logoAnimation = (previousElement:HTMLImageElement, currentElement:HTMLImageElement, theLogoDiv:NodeListOf<HTMLImageElement>) =>{
-	switch(true){
-		case previousElement == undefined || previousElement == null:
-			currentElement.classList.add('show');
-		break;
-
-		case currentElement == previousElement:
-		break;
-
-		default:
-			currentElement.classList.add('show');
-			previousElement.classList.remove('show');
-		break;
+	if(previousElement == undefined || previousElement == null){
+		currentElement.classList.add('show');
+	}else if(currentElement == previousElement){}
+	else{
+		currentElement.classList.add('show');
+		previousElement.classList.remove('show');
 	}
 
 	switch(theLogoDiv){
