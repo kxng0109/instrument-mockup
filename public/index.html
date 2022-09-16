@@ -39,12 +39,19 @@
 			<a href="#" class="nav-links links">contact</a>
 		</nav>
 
-		<div id="cookies">
-			<div>
-				<p>This website uses cookies</p>
-				<p>I wish to opt out</p>
+		<div class="cookies-section">
+			<div class="pb-[23px]">
+				<p id="cookies--text">This website uses cookies</p>
+				<button class="cookies--reject-button">
+					<p class="cookies--reject-text">I wish to opt out</p>
+					<ion-icon name="arrow-forward-outline" class=" text-black text-xs ml-1"></ion-icon></button>
 			</div>
-			<ion-icon name="checkmark-circle"></ion-icon>
+			<button type="button" class="cookies--accept-button">
+				<svg xmlns="http://www.w3.org/2000/svg" id="cookies--accept-svg" class="ionicon" viewBox="0 0 512 512">
+					<title>Accept</title>
+					<path fill="none" stroke="black" class="transition-all duration-[250ms]" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M416 128L192 384l-96-96"/>
+				</svg>
+			</button>
 		</div>
 
 		<main id="main">

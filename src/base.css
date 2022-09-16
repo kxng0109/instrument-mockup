@@ -45,6 +45,10 @@
 	.calculation5{
 		margin-block: calc(160px + 120*(100vw - 320px)/ 2180);
 	}
+
+	.calculation6{
+		font-size: calc(16px + 5*(100vw - 320px)/ 2180);
+	}
 }
 
 /*Not using 357f, 6884, bc3c*/
@@ -125,9 +129,43 @@ ion-icon{
 	@apply text-white cursor-pointer;
 }
 
-#cookies{
-	@apply fixed z-3 bottom-6 inset-x-5 flex py-5 hidden;
+.cookies-section{
+	@apply fixed z-3 bottom-[25px] inset-x-5 flex backdrop-blur-sm justify-between items-center pl-8 pr-4 rounded-full ml-auto max-w-[380px] sm:pl-10 sm:pr-5 xl:max-w-[430px] pointer-events-none;
 	background: hsla(0,0%,100%,.85);
+}
+
+.cookies-section p{
+	@apply text-black tracking-[0.03em]
+}
+
+#cookies--text{
+	@apply pt-5 calculation6;
+	font-family: 'Whyte Book', sans-serif;
+}
+
+.cookies--reject-button{
+	@apply flex items-center opacity-50 hover:opacity-100 transition-opacity duration-300 
+}
+
+.cookies--reject-text{
+	@apply text-[11px] leading-[19px] uppercase pointer-events-auto;
+	font-family: "Monument Grotesk Semi Mono", monospace;
+}
+
+.cookies--accept-button{
+	@apply rounded-full border-[1px] border-gray-400 hover:bg-black transition-colors duration-150 pointer-events-auto;
+}
+
+.cookies--accept-button:hover>svg>path{
+	@apply stroke-white;
+}
+
+#cookies--accept-svg{
+	@apply w-10 h-10 fill-black p-1 lg:p-2 lg:w-[3.25rem] lg:h-[3.25rem];
+}
+
+.hide-cookies{
+	@apply transition-all duration-500 delay-[250ms] opacity-0 translate-y-20
 }
 
 header{
@@ -196,7 +234,7 @@ header{
 }
 
 .card{
-	@apply opacity-0 mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px] lg:flex lg:mx-0 lg:items-center lg:mb-[195px] 2xl:px-[8.167vw];
+	@apply opacity-100 mt-[60px] mb-24 padding sm:mb-[214px] md:mx-[1.85rem] md:mb-[220px] lg:flex lg:mx-0 lg:items-center lg:mb-[195px] 2xl:px-[8.167vw];
 }
 
 #second-card{

@@ -16,6 +16,9 @@ const thirdDivLogos = thirdLogoDiv.querySelectorAll('.sixth--section--logos');
 const changeImage = document.querySelectorAll('.js-changeImage');
 const changeVideo = document.querySelector('.js-changeVideo');
 let firstPreviousImage, secondPreviousImage, thirdPreviousImage;
+const cookieRejectButton = document.querySelector('.cookies--reject-button');
+const cookieAcceptButton = document.querySelector('.cookies--accept-button');
+const cookiesSection = document.querySelector('.cookies-section');
 //Generate a random number based on the number of images in that div and returns a random element
 let randomElement = (theDivLogos) => {
     let randomNumber = Math.floor(Math.random() * theDivLogos.length);
@@ -91,3 +94,9 @@ setInterval(() => {
 setInterval(() => {
     logoAnimation(thirdPreviousImage, randomElement(thirdDivLogos), thirdDivLogos);
 }, 2000);
+cookieRejectButton.onclick = () => {
+    cookiesSection.classList.add('hide-cookies');
+};
+cookieAcceptButton.onclick = () => {
+    cookiesSection.classList.add('hide-cookies');
+};
