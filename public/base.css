@@ -597,6 +597,13 @@ video {
   }
 }
 
+.previousState {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
 .absolute {
   position: absolute;
 }
@@ -625,12 +632,20 @@ video {
   margin-left: 0.25rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.\!hidden {
+  display: none !important;
 }
 
 .h-10 {
@@ -670,10 +685,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.fill-white {
-  fill: #fff;
 }
 
 .pb-\[23px\] {
@@ -1218,7 +1229,6 @@ header {
 .card {
   margin-top: 60px;
   margin-bottom: 6rem;
-  opacity: 1;
 }
 
 @media (min-width: 500px) {
@@ -1299,6 +1309,10 @@ header {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 @media (min-width: 1024px) {
@@ -1313,6 +1327,13 @@ header {
     width: 47.6%;
     min-width: 47.6%;
   }
+}
+
+.card--inner-div {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 @media (min-width: 500px) {
@@ -2013,4 +2034,14 @@ footer{
 
 .hover\:w-\[5\.5rem\]:hover {
   width: 5.5rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
 }

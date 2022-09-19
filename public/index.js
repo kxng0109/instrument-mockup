@@ -3,22 +3,66 @@ const container = document.querySelector('.container');
 const main = document.querySelector('#main');
 const menuBtn = document.querySelector('#menu-btn');
 const navBar = document.querySelector('#navbar');
-const playBtn = document.querySelector('#playBtn');
-const videoTemplate = document.querySelector('#video-template');
-const iframeVideo = document.querySelector('#iframe-video');
-const whitePlayBgIcon = document.querySelector('#white-play-bg');
-const firstLogoDiv = document.querySelector('#first-logo');
-const firstDivLogos = firstLogoDiv.querySelectorAll('.sixth--section--logos');
-const secondLogoDiv = document.querySelector('#second-logo');
-const secondDivLogos = secondLogoDiv.querySelectorAll('.sixth--section--logos');
-const thirdLogoDiv = document.querySelector('#third-logo');
-const thirdDivLogos = thirdLogoDiv.querySelectorAll('.sixth--section--logos');
-const changeImage = document.querySelectorAll('.js-changeImage');
-const changeVideo = document.querySelector('.js-changeVideo');
-let firstPreviousImage, secondPreviousImage, thirdPreviousImage;
 const cookieRejectButton = document.querySelector('.cookies--reject-button');
 const cookieAcceptButton = document.querySelector('.cookies--accept-button');
 const cookiesSection = document.querySelector('.cookies-section');
+const firstSection = main.querySelector('#first-section');
+const playBtn = firstSection.querySelector('#playBtn');
+const videoTemplate = firstSection.querySelectorAll('.video-template');
+const iframeVideo = firstSection.querySelector('#iframe-video');
+const whitePlayBgIcon = firstSection.querySelector('#white-play-bg');
+const firstLogoDiv = main.querySelector('#first-logo');
+const firstDivLogos = firstLogoDiv.querySelectorAll('.sixth--section--logos');
+const secondLogoDiv = main.querySelector('#second-logo');
+const secondDivLogos = secondLogoDiv.querySelectorAll('.sixth--section--logos');
+const thirdLogoDiv = main.querySelector('#third-logo');
+const thirdDivLogos = thirdLogoDiv.querySelectorAll('.sixth--section--logos');
+const changeImage = main.querySelectorAll('.js-changeImage');
+const changeVideo = main.querySelector('.js-changeVideo');
+let firstPreviousImage, secondPreviousImage, thirdPreviousImage;
+class cardElements {
+    constructor(inputedImage, inputedInnerDiv) {
+        this.image = main.querySelector(inputedImage);
+        this.innerDiv = main.querySelector(inputedInnerDiv);
+    }
+}
+const secondSection = main.querySelector('#second-section');
+const firstCardElements = new cardElements('#first-card--image', '#first-card--inner-div');
+const secondCardElements = new cardElements('#second-card--image', '#second-card--inner-div');
+const thirdCardElements = new cardElements('#third-card--image', '#third-card--inner-div');
+const fourthSection = main.querySelector('#fourth-section');
+const fourthCardElements = new cardElements('#first-card2--image', '#first-card2--inner-div');
+const fifthCardElements = new cardElements('#second-card2--image', '#second-card2--inner-div');
+const sixthSection = main.querySelector('#sixth-section');
+const seventhSection = main.querySelector('#seventh-section');
+let previousTime = Date.now();
+let delayFunctionCalling = () => {
+    let currentTime = Date.now();
+    if (currentTime - previousTime >= 500) {
+        runAnimation(secondSection);
+        runAnimation(firstCardElements.image);
+        runAnimation(firstCardElements.innerDiv);
+        runAnimation(secondCardElements.image);
+        runAnimation(secondCardElements.innerDiv);
+        runAnimation(thirdCardElements.image);
+        runAnimation(thirdCardElements.innerDiv);
+        runAnimation(fourthSection);
+        runAnimation(fourthCardElements.image);
+        runAnimation(fourthCardElements.innerDiv);
+        runAnimation(fifthCardElements.image);
+        runAnimation(fifthCardElements.innerDiv);
+        runAnimation(sixthSection);
+        runAnimation(seventhSection);
+        return previousTime = currentTime;
+    }
+};
+let runAnimation = (theElementsVariableName) => {
+    if (theElementsVariableName.getBoundingClientRect().top - screen.height < 35) {
+        theElementsVariableName.classList.add('changeOpacity');
+    }
+};
+setTimeout(delayFunctionCalling, 1000);
+window.onscroll = () => delayFunctionCalling();
 //Generate a random number based on the number of images in that div and returns a random element
 let randomElement = (theDivLogos) => {
     let randomNumber = Math.floor(Math.random() * theDivLogos.length);
@@ -42,11 +86,13 @@ let changeSource = () => {
         sourceChangerFunction('./assets/images/holding_phone-hd.avif', 2);
         sourceChangerFunction('./assets/images/e-hd.avif', 3);
         sourceChangerFunction('./assets/images/life-hd.avif', 4);
-        sourceChangerFunction('./assets/videos/preloaded_video_720p.mp4', undefined);
     }
 };
 changeSource();
-window.onresize = () => changeSource();
+window.onresize = () => {
+    changeSource();
+    delayFunctionCalling();
+};
 menuBtn.onclick = () => {
     let navBarDisplayValue = getComputedStyle(navBar, undefined).getPropertyValue('display');
     if (navBarDisplayValue == 'none') {
@@ -60,7 +106,9 @@ menuBtn.onclick = () => {
 };
 playBtn.onclick = () => {
     playBtn.classList.add('hidden');
-    videoTemplate.classList.add('hidden');
+    videoTemplate.forEach(item => {
+        item.classList.add('!hidden');
+    });
     whitePlayBgIcon.classList.add('hidden');
     /*Video needs to automatically play*/
 };
